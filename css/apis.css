@@ -1,0 +1,274 @@
+*{
+    box-sizing: border-box;
+}
+
+.body{
+    font-family: Raleway, Helvetica, sans-serif;
+    background-color: rgba(245, 222, 179, 0.48);
+    z-index: 0;
+
+    display: grid;
+    grid-template-columns: 400px, 1fr;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+}
+
+.ocultar{
+    display: none;
+}
+
+.aparecer{
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aparecer {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+/* Header y navegador de la página */
+.header{
+    grid-area: header;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.295);
+    /* border: 2px solid red; */
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__link{
+    font-size: 2rem;
+    margin-right: 50px;
+    text-decoration: none;
+    color: blue;
+}
+
+.volver{
+    color: black;
+}
+
+.nav__link:hover{
+    animation-name: animacion_enlace;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacion_enlace {
+    from {
+        color: blue;
+        text-decoration: none; 
+      }
+    
+      to {
+        color: green;
+        text-decoration: underline;
+        letter-spacing: 2px;
+      }
+}
+
+/* ********************************************************* */
+
+/* Main */
+.main{
+    grid-area: main;
+    width: 1000px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.api__title{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: underline;
+    font-variant: small-caps;
+}
+
+/* HTTP Status Dogs */
+.article__inputCodigoHttp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.label{
+    font-size: 1.4rem;
+}
+
+.input__codigo{
+    margin-top: 10px;
+    width: 200px;
+}
+
+.button{
+    margin-top: 10px;
+    width: 200px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.button:hover{
+    cursor: pointer;
+    color: gray;
+    background-color: black;
+    border: 1px solid gray;
+}
+
+.error__httpDogs{
+    color: red;
+}
+
+.httpDogInfo__span{
+    color: blue;
+}
+
+.div__imagenHttpDog{
+    width: 500px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img__httpDog{
+    width: 300px;
+}
+
+.galeriaHttp{
+    font-size: 1.4rem;
+}
+
+.galeriaHttp__div{
+    border: 2px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img__galeriaHttp{
+    width: 200px;
+    margin: 5px;
+}
+
+.img__galeriaHttp:hover{
+    cursor: pointer;
+    animation-name: agrandar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes agrandar {
+
+    form{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.2);
+    }
+
+}
+
+/* Fin de HTTP Status Dogs ********************************************* */
+
+/* TheDogAPI */
+.div__TheDogAPI{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input__TheDogAPI{
+    margin-top: 10px;
+    width: 200px;
+}
+
+.error__TheDogAPI{
+    color: red;
+}
+
+.galeriaTheDogAPI{
+    border: 2px solid black;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img__galeriaTheDogAPI{
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    box-shadow: -1px 3px 14px 0px rgba(0,0,0,0.75);
+    border: 2px solid black;
+}
+
+.img__galeriaTheDogAPI:hover{
+    cursor: pointer;
+    animation-name: agrandar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.mensajeInformativo__TheDogAPI{
+    color: blue;
+}
+
+/* Fin de TheDogAPI ***************************************************** */
+
+
+/* Footer */
+.footer{
+    grid-area: footer;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.295);
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.footer__list{
+    list-style: none;
+}
+
+.list__item{
+    padding: 10px;
+}
+
+.list__link{
+    text-decoration: none;
+    color: green;
+}
+
+.list__link:hover{
+    text-decoration: underline;
+}
+
+.footer__div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+}

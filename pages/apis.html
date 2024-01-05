@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apis de Luis Risueño da Silva</title>
+    <link rel="stylesheet" href="../css/apis.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="body">
+    
+    <!-- Inicio del header y el navegador -->
+    <header class="header">
+
+        <nav class="nav" id="nav">
+            <p><a href="#" class="nav__link" id="nav__HttpStatusDogs">HTTP STATUS DOGS</a></p>
+            <p><a href="#" class="nav__link" id="nav__TheDogAPI">TheDogAPI</a></p>
+            <p><a href="../index.html" class="nav__link volver">Volver</a></p>
+        </nav>
+
+    </header>
+    <!-- Fin del header y el navegador -->
+
+    <!-- Inicio del main -->
+    <main class="main">
+
+        <!-- Api HTTP Status Dogs -->
+        <section class="section__HttpStatusDogs ocultar" id="section__HttpStatusDogs">
+            <p class="api__title">HTTP Status Dogs</p>
+
+            <!-- Input de códigos de HTTP -->
+            <article class="article__inputCodigoHttp">
+
+                
+                <div>
+                    <!-- El usuario escribe el código HTTP -->
+                    <label class="label">Escribe un código HTTP:</label>
+                    <br>
+                    <input type="number" placeholder="Ejemplo: 102" class="input__codigo" id="input__codigo" maxlength="3">
+                    <br>
+                    <button class="button" id="button__codigoHttp">Mostrar imagen</button>
+
+                    <!-- Mensaje de error -->
+                    <p class="error__httpDogs ocultar" id="error__httpDogs"></p>
+
+                    <!-- Información de  -->
+                    <div class="httpDogInfo ocultar" id="httpDogInfo">
+                        <p>Código: <span class="httpDogInfo__span" id="httpDogInfo__cod"></span> </p>
+                        <p>Nombre: <span class="httpDogInfo__span" id="httpDogInfo__nom"></span> </p>
+                    </div>
+
+                </div>
+
+                <!-- Aquí aparece la imagen -->
+                <div class="div__imagenHttpDog" id="div__imagenHttpDog">
+
+                    <p>La imagen aparecerá aquí</p>
+
+                    <!-- Aquí añado la imagen que el usuario ha buscado en el input -->
+
+                    <!-- Es formato de la imagen es: -->
+                    <!-- <img src="***" alt="***" class="img__httpDog"> -->
+                </div>
+                
+            </article>
+            <!-- Fin de Input de códigos de HTTP -->
+
+            <!-- Galería con las imágenes buscadas -->
+            <article class="galeriaHttp ocultar" id="galeriaHttp">
+
+                <p>Galería de imágenes buscadas:</p>
+
+                <div class="galeriaHttp__div" id="galeriaHttp__div">
+                    <!-- Las imágenes de la galería van aquí dentro -->
+
+                    <!-- Es formato de la imagen es: -->
+                    <!-- <img src="***" alt="***" class="img__galeriaHttp"> -->
+                </div>
+
+            </article>
+            <!-- Fin de la galería -->
+
+        </section>
+        <!-- Fin de Api HTTP Status Dogs -->
+
+
+        <!-- TheDogAPI -->
+        <section class="section__TheDogAPI ocultar" id="section__TheDogAPI">
+            <p class="api__title">TheDogAPI</p>
+
+            <!-- El usuario escribe cuantas imágenes de perros quiere -->
+            <div class="div__TheDogAPI">
+                <label class="label">¿Cuántas fotos de perros quieres?</label>
+                <br>
+                <input type="number" placeholder="Máximo: 100 imagenes" class="input__TheDogAPI" id="input__TheDogAPI">
+                <br>
+                <button class="button" id="button__TheDogAPI">Mostrar imagen/es</button>
+
+                <p class="mensajeInformativo__TheDogAPI">Nota: la búsqueda de imágenes puede tardar un rato</p>
+
+                <p class="error__TheDogAPI ocultar" id="error__TheDogAPI"></p>
+
+            </div>
+
+            <!-- Galería donde se colocan las imágenes -->
+            <div class="galeriaTheDogAPI" id="galeriaTheDogAPI">
+                <!-- Las imágenes de la galería van aquí dentro -->
+                
+                <!-- El formato de la imagen es: -->
+                <!-- <img src="***" alt="***" class="img__galeriaTheDogAPI"> -->
+            </div>
+
+        </section>
+        <!-- Fin de TheDogAPI -->
+
+    </main>
+    <!-- Fin del main -->
+        
+    <!-- Inicio del footer -->
+    <footer class="footer">
+        <p>APIS utilizadas:</p>
+        <ul class="footer__list">
+            <li class="list__item"><a class="list__link" href="https://http.dog/" target="_blank">HTTP STATUS DOGS</a></li>
+            <li class="list__item"><a class="list__link" href="https://thedogapi.com/" target="_blank">TheDogAPI</a></li>
+        </ul>
+
+        <hr>
+
+        <div class="footer__div">
+            <p>Alumno: Luis Risueño da Silva</p>
+            <p>Curso: 2º DAW</p>
+            <p>Asignatura: DWEC</p>
+        </div>
+
+    </footer>
+    <!-- Fin del footer -->
+
+    <script src="../js/script.js"></script>
+    <script src="../js/apiHttpDogs.js"></script>
+    <script src="../js/theDopApi.js"></script>
+</body>
+</html>

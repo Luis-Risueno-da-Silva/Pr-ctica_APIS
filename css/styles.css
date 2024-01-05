@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../assets/images/ImagenDeFondo.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+    font-family: Raleway, Helvetica, sans-serif;
+}
+
+main{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.div__acceder{
+    width: 400px;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.div__text{
+    font-size: 1.4rem;
+}
+
+.text__subrrayado{
+    text-decoration: underline;
+}
+
+.div__link{
+    text-decoration: none;
+    color: blue;
+    font-size: 1.2rem;
+}
+
+.div__link:hover{
+    color: green;
+    text-decoration: underline;
+}

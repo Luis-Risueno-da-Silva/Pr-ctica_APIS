@@ -1,0 +1,3 @@
+HTTP STATUS DOGS --> https://http.dog/
+
+TheDogAPI --> https://thedogapi.com/
